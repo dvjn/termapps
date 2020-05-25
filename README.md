@@ -17,6 +17,12 @@ export TERMAPPS_INSTALL="$HOME/.termapps"
 source "$TERMAPPS_INSTALL/apps.sh"
 ```
 
+To enable bash completion, add this
+
+```shell
+source "$TERMAPPS_INSTALL/apps-completion.sh"
+```
+
 ## Apps
 
 - notes
