@@ -56,7 +56,7 @@ notes() {
       find "$NOTES_DIR" -mindepth 1 -type d -empty -delete
       ;;
     list)
-      find "$NOTES_DIR" -name "*.$NOTES_EXTENSION" | sed -e "s+^$NOTES_DIR/++" -e "s+/note.$NOTES_EXTENSION$++" -e "s+/+ +g" | sort 
+      find "$NOTE_DIR" -name "*.$NOTES_EXTENSION" | sed -e "s+^$NOTES_DIR/++" -e "s+/note.$NOTES_EXTENSION$++" -e "s+/+ +g" | sort 
       ;;
     help)
       echo "$HELP_STR"
