@@ -15,7 +15,7 @@ notes() {
   local HELP_STR="usage: notes <command> [nested notes ...]
   
   commands:
-      list      Show the notes directory structure.
+      list      List all the notes and subnotes.
       read      Read a note in \$NOTES_READER.
       create    Create a new note.
       edit      Create(if not present) and edit a note in \$EDITOR.
