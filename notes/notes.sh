@@ -33,7 +33,7 @@ environment:
   [ ! -d "$NOTES_DIR" ] && mkdir -p "$NOTES_DIR"
   
   local cmd=${1-"help"}
-  shift
+  [[ $# -ne 0 ]] && shift
   
   join_by() { local IFS="$1"; shift; echo "$*"; }
   
