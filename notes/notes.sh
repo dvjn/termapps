@@ -45,14 +45,17 @@ environment:
       $NOTES_READER "$NOTE_PATH"
       ;;
     create)
+      [ "$NOTE_DIR" = "$NOTES_DIR" ] && echo "Specify the note name." && return
       [ ! -d "$NOTE_DIR" ] && mkdir -p "$NOTE_DIR"
       touch "$NOTE_PATH"
       ;;
     edit)
+      [ "$NOTE_DIR" = "$NOTES_DIR" ] && echo "Specify the note name." && return
       [ ! -d "$NOTE_DIR" ] && mkdir -p "$NOTE_DIR"
       $NOTES_EDITOR "$NOTE_PATH"
       ;;
     remove)
+      [ "$NOTE_DIR" = "$NOTES_DIR" ] && echo "Specify the note name." && return
       rm "$NOTE_PATH" 2> /dev/null
       find "$NOTES_DIR" -mindepth 1 -type d -empty -delete
       ;;
