@@ -12,22 +12,23 @@ notes() {
   local NOTES_EDITOR=${NOTES_EDITOR-${EDITOR-$DEFAULT_NOTES_EDITOR}}
   local NOTES_READER=${NOTES_READER-$DEFAULT_NOTES_READER}
  
-  local HELP_STR="usage: notes <command> [nested notes ...]
+  local HELP_STR="usage:
+    notes <command> [nested notes ...]
   
-  commands:
-      list      List all the notes and subnotes.
-      read      Read a note in \$NOTES_READER.
-      create    Create a new note.
-      edit      Create(if not present) and edit a note in \$EDITOR.
-      remove    Remove specified note.
-      help      View this help.
+commands:
+    list      List all the notes and subnotes.
+    read      Read a note in \$NOTES_READER.
+    create    Create a new note.
+    edit      Create(if not present) and edit a note in \$EDITOR.
+    remove    Remove specified note.
+    help      View this help.
   
-  environment:
-      NOTES_DIR         Directory to store the notes. Defaults to \$TERMAPPS_INSTALL/saved/notes.
-      NOTES_EXTENSION   Format of saved notes. Defaults to $DEFAULT_NOTES_EXTENSION.
-      NOTES_EDITOR      Editor to edit the notes. Defaults to \$EDITOR if set, else $DEFAULT_NOTES_EDITOR.
-      NOTES_READER      Reader for reading notes. Defaults to $DEFAULT_NOTES_READER.
-  "
+environment:
+    NOTES_DIR         Directory to store the notes. Defaults to \$TERMAPPS_INSTALL/saved/notes.
+    NOTES_EXTENSION   Format of saved notes. Defaults to $DEFAULT_NOTES_EXTENSION.
+    NOTES_EDITOR      Editor to edit the notes. Defaults to \$EDITOR if set, else $DEFAULT_NOTES_EDITOR.
+    NOTES_READER      Reader for reading notes. Defaults to $DEFAULT_NOTES_READER.
+"
   
   [ ! -d "$NOTES_DIR" ] && mkdir -p "$NOTES_DIR"
   
