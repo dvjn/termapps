@@ -67,7 +67,7 @@ environment:
       ;;
     *)
       echo "Invalid argument $cmd" >&2
-      exit 1
+      return
       ;;
   esac
 }
