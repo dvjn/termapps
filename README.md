@@ -7,7 +7,7 @@ A collection of small terminal apps.
 Clone the repository
 
 ```shell
-git clone https://github.com/divykj/termapps.git ~/.termapps
+git clone https://github.com/dvjn/termapps.git ~/.termapps
 ```
 
 Add this to `.bash_profile`, `.bashrc` or any other equivalent file.
